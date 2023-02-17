@@ -10,7 +10,80 @@
 
 <body>
     
+    <div class="box">
+        <p id="demo">
+            I believe the poem is an act of the mind. 
+        </p>
+        <h2 id="demo2">
+            I think it is easier to talk about the end of a poem than it is to talk about the beginning. 
+        </h2>
+        <p id="demo3">
+            Because the poem ends on the page, but it begins off the page, it begins in the <a class="pa" onclick="myFunction()"> mind</a>. The mind acts, the mind wills a poem, often against our own will; somehow this happens, somehow a poem gets written in the middle of a chaotic holiday party that has just run out of ice, and it’s your house. 
+        </p>
+    </div>
+
+    <p id="mind">
+        mind
+    </p>
+    <p id="poem" onclick="myFunction2()">
+        poem
+    </p>
+
+    <div class="gone" id="circle" onclick='redirect_Page(this)'></div>
+
+
+<script>
     
+    function myFunction() {
+      document.getElementsByTagName("BODY")[0].style.backgroundColor = "white";
+      document.getElementById("demo").style.opacity = "0%";
+      document.getElementById("demo2").style.opacity = "0%";
+      document.getElementById("demo3").style.opacity = "0%";
+      document.getElementById("circle").style.opacity = "0%";
+
+      document.getElementById("demo").style.zIndex = "-1";
+      document.getElementById("demo2").style.zIndex = "-1";
+      document.getElementById("demo3").style.zIndex = "-1";
+      document.getElementById("poem").style.zIndex = "1";
+    }
+    function myFunction2() {
+      document.getElementsByTagName("BODY")[0].style.backgroundColor = "black";
+      document.getElementById("demo").style.opacity = "100%";
+      document.getElementById("demo2").style.opacity = "100%";
+      document.getElementById("demo3").style.opacity = "100%";
+      document.getElementById("circle").style.opacity = "100%";
+      
+      document.getElementById("demo").style.zIndex = "1";
+      document.getElementById("demo2").style.zIndex = "1";
+      document.getElementById("demo3").style.zIndex = "1";
+      document.getElementById("tree").style.zIndex = "-1";      
+    }
+
+    let redirect_Page = (ele) => {
+    	
+        ele.disabled = true;
+        
+        let tID = setTimeout(function () {
+          
+          document.getElementsByTagName("BODY")[0].style.backgroundColor = "black";
+
+			// redirect page.
+            window.location.href = '6.html';
+ 
+            
+        }, 1000);	// call function after 5000 milliseconds or 5 seconds
+
+        document.getElementsByTagName("BODY")[0].style.backgroundColor = "black";
+        document.getElementById("demo").style.opacity = "0%";
+        document.getElementById("demo2").style.opacity = "0%";
+        document.getElementById("demo3").style.opacity = "0%";
+        document.getElementById("demo4").style.opacity = "0%";
+        document.getElementById("demo5").style.opacity = "0%";
+        document.getElementById("demo6").style.opacity = "0%";
+        document.getElementById("circle").style.opacity = "0%";
+    }
+
+</script>
 
 </body>
 </html>
