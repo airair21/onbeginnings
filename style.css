@@ -20,6 +20,10 @@ body {
     */
 }
 
+div {
+    transition: 2s;
+}
+
 
 h2 {
     font-family: "contralto-big", sans-serif;
@@ -115,13 +119,13 @@ section .text {
 section .text span {
     position: absolute;
     display: inline-block;
-    transform-origin: 0 189px;
-    top: -189px;
+    transform-origin: 0 200px;
+    top: -200px;
 }
 
 
 #wait {
-    animation: wait 27s linear;
+    animation: wait 37s linear;
 }
 @keyframes wait {
     from 
@@ -313,4 +317,14 @@ a:hover {
 }
 .gone {
     opacity: 0%;
+}
+.circle {
+    width: 148px;
+    height: 148px;
+    border-radius: 100%;
+    border: 6px solid #727272;
+    filter: blur(3.5px);
+
+    margin-left: 80%;
+    transition: 1s;
 }
