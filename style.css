@@ -115,20 +115,10 @@ section .text {
 section .text span {
     position: absolute;
     display: inline-block;
-    transform-origin: 0 188px;
-    top: -188px;
+    transform-origin: 0 189px;
+    top: -189px;
 }
-strong .text {
-    color: black;
-    opacity: 0%;
-}
-.strong {
-    color: black;
-    opacity: 0%;
-}
-.black {
-    color: black;
-}
+
 
 #wait {
     animation: wait 27s linear;

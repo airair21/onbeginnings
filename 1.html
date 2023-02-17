@@ -13,11 +13,7 @@
    
 
     <section>
-        <h3 class="text">In <strong>/</strong> life,<strong>/</strong>the<strong>-</strong>number<strong>-</strong>of<strong>-</strong>beginnings<strong>-</strong>is<strong>-</strong>exactly<strong>-</strong>equal<strong>-</strong>to<strong>-</strong>the<strong>-</strong>number<strong>-</strong>of<strong>-</strong>endings:<strong>-</strong></h3>
-        <!--
-        <h3 class="text">In <div class="black">-</div> life,<div class="black">-</div>the<div class="black">-</div>number<div class="black">-</div>of<div class="black">-</div>beginnings<div class="black">-</div>is<div class="black">-</div>exactly<div class="black">-</div>>equal<div class="black">-</div>to<div class="black">-</div>the<div class="black">-</div>number<div class="black">-</div>of<div class="black">-</div>endings:<div class="black">-</div></h3>
-        -->
-        <!-- <p class="text">In&emsp;life,&emsp;the&emsp;number&emsp;of&emsp;beginnings&emsp;is&emsp;exactly&emsp;equal&emsp;to&emsp;the&emsp;number&emsp;of&emsp;endings:</p> -->
+        <h3 class="text">In - life,-the-number-of-beginnings-is-exactly-equal-to-the-number-of-endings:-</h3>
     </section>
     <script>
         // now split text in letters
@@ -26,7 +22,14 @@
 
         const element = document.querySelectorAll('span');
         for(let i=0; i<element.length; i++) {
-            element[i].style.transform = "rotate("+i*4.67+"deg)"
+            const txt = element[i].textContent
+
+            if (txt === '-') {
+                console.log('make transparent')
+                element[i].style.opacity = 0
+            }
+
+            element[i].style.transform = "rotate("+i*4.63+"deg)"
         }
 
         document.addEventListener("mousemove", function(e)
