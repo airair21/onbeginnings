@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On Beginnings</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/mlb7wxa.css">
+</head>
+
+<body>
+    
+    <div class="box"> 
+   <p class="words" id="disappear">
+    In poetry the number of beginnings so far exceeds the number of endings that cannot even conceive of it. Not every poem is <a class="pa" onclick="myFunction()"> finished</a>–
+   </p>
+   <p id="appear">
+    one poem is abandoned, another catches fire and is carried by the wind, which may be an ending, but it is the ending of a poem without an <a class="pa" id="link" onclick='redirect_Page(this)'> end</a>. 
+   </p>
+    </div>
+
+   
+<script>
+    
+    function myFunction() {
+      document.getElementById("appear").style.opacity = "100%";
+      document.getElementById("disappear").style.opacity = "0%";
+    }
+
+    let redirect_Page = (ele) => {
+    	
+        ele.disabled = true;
+        
+        let tID = setTimeout(function () {
+
+			// redirect page.
+            window.location.href = '3.html';
+ 
+            
+        }, 1500);	// call function after 5000 milliseconds or 5 seconds
+
+        document.getElementsByTagName("BODY")[0].style.backgroundColor = "black";      
+        document.getElementById("appear").style.opacity = "0%";
+    }
+
+</script>
+
+
+
+</body>
+</html>

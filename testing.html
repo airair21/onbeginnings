@@ -1,0 +1,65 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On Beginnings</title>
+    <link rel="stylesheet" href="testing.css">
+    <link rel="stylesheet" href="https://use.typekit.net/mlb7wxa.css">
+</head>
+
+<body>
+    
+    <div class="box"> 
+   <p>
+        In the beginning was the   
+    </p>
+    <h2>
+        Word.
+    </h2>
+   <p>
+        Western Civilization rests upon those words. And yet there is a lively group of thinkers who believe that in the beginning was the    
+    </p>
+    <h2>
+        Act. 
+    </h2>
+    <p>
+        That nothing can precede action–no breath before act, no thought before act, no pervasive love before some kind of act. 
+    </p>
+    </div>
+
+    <a href="4.html"><div id="circle"></div></a>
+
+    <!-- Home page -->
+<div class="m-scene" id="main">
+    <div class="m-header scene_element scene_element--fadein">
+      ...
+    </div>
+    <div class="m-page scene_element scene_element--fadeinup">
+      ...
+    </div>
+  </div>
+
+ <script>
+    ;(function ($) {
+  'use strict';
+  var content  = $('#main').smoothState({
+        // onStart runs as soon as link has been activated
+        onStart : {
+          
+          // Set the duration of our animation
+          duration: 250,
+          
+          // Alterations to the page
+          render: function () {
+
+            // Quickly toggles a class and restarts css animations
+            content.toggleAnimationClass('is-exiting');
+          }
+        }
+      }).data('smoothState'); // makes public methods available
+})(jQuery);
+ </script>
+
+</body>
+</html>

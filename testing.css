@@ -1,0 +1,116 @@
+body {
+    font-family: "quiverleaf-cf", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+
+    background-color: black;
+    color: #727272;
+}
+p {
+    font-size: 25px;
+
+    transition: .5s;
+}
+h2 {
+    font-family: "contralto-big", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+
+    color: white;
+
+    padding: 21pt;
+
+    transition: .5s;
+}
+.box {
+    width: 50%;
+    margin: auto;
+    padding: 10%;
+
+    height: fit-content;
+    /* border: 2pt solid green; */
+    z-index: 2;
+}
+#circle {
+    width: 148px;
+    height: 148px;
+    border-radius: 100%;
+    border: 6px solid #727272;
+    filter: blur(3.5px);
+
+    margin-left: 80%;
+    transition: 1s;
+}
+#circle:hover {
+    border: 9px solid white;
+}
+
+
+/*
+ * Keyframes
+ */
+
+ @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translate3d(0, 100%, 0);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  
+  @keyframes fadeInRight {
+    0% {
+      opacity: 0;
+      transform: translate3d(100%, 0, 0);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  
+  /*
+ * CSS Page Transitions
+ * Don't forget to add vendor prefixes!
+ */
+.m-scene {
+    /** Basic styles for an animated element */
+    .scene_element {
+      animation-duration: 0.25s;
+      transition-timing-function: ease-in;
+      animation-fill-mode: both;
+  
+    }
+  
+    /** An element that fades in */
+    .scene_element--fadein {
+      animation-name: fadeIn;
+    }
+  
+    /** An element that fades in and slides up */
+    .scene_element--fadeinup {
+      animation-name: fadeInUp;
+    }
+  
+    /** An element that fades in and slides from the right */
+    .scene_element--fadeinright {
+      animation-name: fadeInRight;
+    }
+  }
+

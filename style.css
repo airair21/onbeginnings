@@ -1,0 +1,326 @@
+body {
+    font-family: "quiverleaf-cf", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+
+    background-color: black;
+    color: #727272;
+
+    transition: 2s;
+
+    /*
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    place-items: center;
+    
+    -webkit-font-smoothing: antialiased;
+    overflow: hidden;
+    */
+}
+
+
+h2 {
+    font-family: "contralto-big", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+
+     /*
+    
+    
+    */
+
+    color: white;
+
+    padding: 21pt;
+
+    transition: .5s;
+}
+
+p {
+    font-size: 18px;
+
+    transition: .5s;
+
+    /*
+    font-family: "p22-mackinac-pro", serif;
+    font-weight: 400;
+    font-style: normal;
+    */
+
+    /*
+    font-family: "kepler-std", serif;
+    font-weight: 300;
+    font-style: normal;
+    */
+
+    
+    font-family: "kepler-std-caption", serif;
+    font-weight: 300;
+    font-style: normal;
+    
+    /*
+    font-family: "utopia-std-display", serif;
+font-weight: 400;
+font-style: normal;
+*/
+
+
+    /*
+    font-family: "ltc-caslon-pro", serif;
+font-weight: 400;
+font-style: normal; */
+}
+
+
+/* spinning circle from https://www.youtube.com/watch?v=tqOSN4K5ha4 */
+h3 {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+
+    font-family: "contralto-big", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+section .text {
+    position: absolute;
+    color: white;
+    font-size: 1.5em;
+    user-select: none;
+    pointer-events: none;
+    animation: animate 17s linear infinite;
+}
+@keyframes animate {
+    0% 
+    {
+        transform: rotate(360deg);
+    }
+    100%
+    {
+        transform: rotate(0deg);
+    }
+}
+section .text span {
+    position: absolute;
+    display: inline-block;
+    transform-origin: 0 188px;
+    top: -188px;
+}
+strong .text {
+    color: black;
+    opacity: 0%;
+}
+.strong {
+    color: black;
+    opacity: 0%;
+}
+.black {
+    color: black;
+}
+
+#wait {
+    animation: wait 27s linear;
+}
+@keyframes wait {
+    from 
+    {
+        opacity: 0%;
+    }
+    to
+    {
+        opacity: 100%;
+    }
+}
+
+
+.title {
+    text-align: center;
+    font-size: 96px;
+}
+
+.by {
+    text-align: right;
+    text-anchor: end;
+    margin-top: auto;
+}
+
+.center {
+    height: 800px;
+    position: relative;
+}
+.center p {
+    margin: 0;
+    position: absolute;
+    top: 100%;
+    left: 75%;
+    transform: translate(-50%, -50%); 
+}
+.center h2 {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    } 
+
+    
+.words {
+    width: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    margin: 0;
+    position: absolute;
+} 
+
+a {
+    color: white;
+    transition: 2.5s;
+    text-decoration: underline;
+}
+a:hover {
+    background-color: white;
+    color: black;
+}
+.pa {
+    color: #727272;
+    transition: 2.5s;
+}
+
+.box {
+    width: 50%;
+    margin: auto;
+    padding-top: 3%; 
+
+    height: fit-content;
+    /* border: 2pt solid green; */
+    z-index: 2;
+}
+
+
+#tree {
+    transform: rotate(-71.09deg);
+    position: absolute;
+    left: 526px;
+    top: 504.84px;
+
+    font-size: 60pt;
+    z-index: -1;
+    color: black;
+    text-decoration: underline;
+
+    transition: 2s ease-in-out;
+}
+#tree:hover {
+    color: white;
+    background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(102,102,102,1) 34%, rgba(255,255,255,1) 100%);
+}
+#tree2 {
+    transform: rotate(-81.09deg);
+    position: absolute;
+    left: 566px;
+    top: 354.84px;
+
+    font-size: 60pt;
+    z-index: -1;
+    color: black;
+}
+#tree3 {
+    transform: rotate(-91.09deg);
+    position: absolute;
+    left: 576px;
+    top: 224.84px;
+
+    font-size: 60pt;
+    z-index: -1;
+    color: black;
+}
+#fruit {
+    position: absolute;
+    left: 427px;
+    top: 279px;
+
+    font-size: 40pt;
+    z-index: -1;
+    color: black;
+}
+#fruit2 {
+    position: absolute;
+    left: 487px;
+    top: 179px;
+
+    font-size: 40pt;
+    z-index: -1;
+    color: black;
+}
+#fruit3 {
+    position: absolute;
+    left: 827px;
+    top: 269px;
+
+    font-size: 40pt;
+    z-index: -1;
+    color: black;
+}
+#fruit4 {
+    position: absolute;
+    left: 727px;
+    top: 229px;
+
+    font-size: 40pt;
+    z-index: -1;
+    color: black;
+}
+#fruit5 {
+    position: absolute;
+    left: 667px;
+    top: 129px;
+
+    font-size: 40pt;
+    z-index: -1;
+    color: black;
+}
+/*
+#demo6 {
+    z-index: 7;
+} */
+
+#appear {
+    opacity: 0%;
+    transition: 2s ease-out;
+    z-index: -1;
+}
+#disappear {
+    opacity: 100%;
+    transition: 2s ease-out;
+}
+
+#circle {
+    width: 148px;
+    height: 148px;
+    border-radius: 100%;
+    border: 6px solid #727272;
+    filter: blur(3.5px);
+
+    margin-left: 80%;
+    transition: 1s;
+}
+#circle:hover {
+    border: 9px solid white;
+}
+.gone {
+    opacity: 0%;
+}

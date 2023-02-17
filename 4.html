@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On Beginnings</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/mlb7wxa.css">
+</head>
+
+<body>
+    
+    <div class="box"> 
+   <p>
+        In the beginning was the   
+    </p>
+    <h2>
+        Word.
+    </h2>
+   <p>
+        Western Civilization rests upon those words. And yet there is a lively group of thinkers who believe that in the beginning was the    
+    </p>
+    <h2>
+        Act. 
+    </h2>
+    <p>
+        That nothing can precede action–no breath before act, no thought before act, no pervasive love before some kind of act. 
+    </p>
+    </div>
+
+    <a onclick='redirect_Page(this)'><div id="circle"></div></a>
+
+    <script>
+        let redirect_Page = (ele) => {
+    	
+        ele.disabled = true;
+        
+        let tID = setTimeout(function () {
+          
+          document.getElementsByTagName("BODY")[0].style.backgroundColor = "black";
+
+			// redirect page.
+            window.location.href = '4.html';
+ 
+            
+        }, 1500);	// call function after 5000 milliseconds or 5 seconds
+
+        document.getElementsByTagName("BODY")[0].style.backgroundColor = "black";
+        document.getElementById("demo").style.opacity = "0%";
+        document.getElementById("demo2").style.opacity = "0%";
+        document.getElementById("demo3").style.opacity = "0%";
+        document.getElementById("demo4").style.opacity = "0%";
+        document.getElementById("demo5").style.opacity = "0%";
+        document.getElementById("demo6").style.opacity = "0%";
+        document.getElementById("circle").style.opacity = "0%";
+    }
+    </script>
+
+</body>
+</html>

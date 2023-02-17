@@ -1,0 +1,131 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On Beginnings</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/mlb7wxa.css">
+</head>
+
+<body>
+ 
+    
+<div class="box"> 
+   <p id="demo">
+        Paul Valéry, the French poet and thinker, once said that 
+   </p>
+        <h2 id="demo2">
+            no poem is ever ended, that every poem is merely abandoned. 
+        </h2>
+    <p id="demo3">
+        This saying is also attributed to Stéphane Mallarmé, for where quotations begin is in a cloud. Paul Valéry also described his perception of first lines so vividly, and to my mind so accurately, that I have never forgotten it:
+    </p>
+        <h2 id="demo4">
+            The opening line of a poem
+        </h2>
+    <p id="demo5">
+        he said
+    </p>
+        <h2 id="demo6">
+            is like finding a <a id="afruit" onclick="myFunction()"> fruit</a> on the ground, a piece of fallen fruit you have never seen before, and the poet’s task is to create the tree from which such a fruit would fall. 
+        </h2>
+</div>
+
+<p id="tree" onclick="myFunction2()">
+    tree
+</p>
+<p id="tree2">
+    tree
+</p>
+<p id="tree3">
+    tree
+</p>
+<p id="fruit">
+    fruit
+</p>
+<p id="fruit2">
+    fruit
+</p>
+<p id="fruit3">
+    fruit
+</p>
+<p id="fruit4">
+    fruit
+</p>
+<p id="fruit5">
+    fruit
+</p>
+
+<!-- <a href="4.html"> -->
+    <div class="gone" id="circle" onclick='redirect_Page(this)'></div>
+<!-- </a> -->
+
+<script>
+    
+    function myFunction() {
+      document.getElementsByTagName("BODY")[0].style.backgroundColor = "white";
+      document.getElementById("demo").style.opacity = "0%";
+      document.getElementById("demo2").style.opacity = "0%";
+      document.getElementById("demo3").style.opacity = "0%";
+      document.getElementById("demo4").style.opacity = "0%";
+      document.getElementById("demo5").style.opacity = "0%";
+      document.getElementById("demo6").style.opacity = "0%";
+      document.getElementById("circle").style.opacity = "0%";
+
+      document.getElementById("demo").style.zIndex = "-1";
+      document.getElementById("demo2").style.zIndex = "-1";
+      document.getElementById("demo3").style.zIndex = "-1";
+      document.getElementById("demo4").style.zIndex = "-1";
+      document.getElementById("demo5").style.zIndex = "-1";
+      document.getElementById("demo6").style.zIndex = "-1";
+      document.getElementById("tree").style.zIndex = "1";
+    }
+    function myFunction2() {
+      document.getElementsByTagName("BODY")[0].style.backgroundColor = "black";
+      document.getElementById("demo").style.opacity = "100%";
+      document.getElementById("demo2").style.opacity = "100%";
+      document.getElementById("demo3").style.opacity = "100%";
+      document.getElementById("demo4").style.opacity = "100%";
+      document.getElementById("demo5").style.opacity = "100%";
+      document.getElementById("demo6").style.opacity = "100%";
+      document.getElementById("circle").style.opacity = "100%";
+      
+      document.getElementById("demo").style.zIndex = "1";
+      document.getElementById("demo2").style.zIndex = "1";
+      document.getElementById("demo3").style.zIndex = "1";
+      document.getElementById("demo4").style.zIndex = "1";
+      document.getElementById("demo5").style.zIndex = "1";
+      document.getElementById("demo6").style.zIndex = "1";
+      document.getElementById("tree").style.zIndex = "-1";      
+    }
+
+    let redirect_Page = (ele) => {
+    	
+        ele.disabled = true;
+        
+        let tID = setTimeout(function () {
+          
+          document.getElementsByTagName("BODY")[0].style.backgroundColor = "black";
+
+			// redirect page.
+            window.location.href = '4.html';
+ 
+            
+        }, 1500);	// call function after 5000 milliseconds or 5 seconds
+
+        document.getElementsByTagName("BODY")[0].style.backgroundColor = "black";
+        document.getElementById("demo").style.opacity = "0%";
+        document.getElementById("demo2").style.opacity = "0%";
+        document.getElementById("demo3").style.opacity = "0%";
+        document.getElementById("demo4").style.opacity = "0%";
+        document.getElementById("demo5").style.opacity = "0%";
+        document.getElementById("demo6").style.opacity = "0%";
+        document.getElementById("circle").style.opacity = "0%";
+    }
+
+</script>
+
+        
+</body>
+</html>
