@@ -104,7 +104,7 @@ section .text {
     font-size: 1.5em;
     user-select: none;
     pointer-events: none;
-    animation: animate 17s linear infinite;
+    animation: animate 10s linear infinite;
 }
 @keyframes animate {
     0% 
@@ -119,20 +119,24 @@ section .text {
 section .text span {
     position: absolute;
     display: inline-block;
-    transform-origin: 0 200px;
-    top: -200px;
+    transform-origin: 0 170px;
+    top: -170px;
 }
 
 
 #wait {
-    animation: wait 37s linear;
+    animation: wait 17s linear;
 }
 @keyframes wait {
-    from 
+    0%
     {
         opacity: 0%;
     }
-    to
+    40% 
+    {
+        opacity: 0%;
+    }
+    100%
     {
         opacity: 100%;
     }
@@ -171,11 +175,11 @@ section .text span {
 
     
 .words {
-    width: 50%;
+    width: 40%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-align: center;
+    text-align: left;
     margin: 0;
     position: absolute;
 } 
@@ -295,10 +299,13 @@ a:hover {
 #appear {
     opacity: 0%;
     transition: 2s ease-out;
-    z-index: -1;
 }
 #disappear {
     opacity: 100%;
+    transition: 2s ease-out;
+}
+#appear2 {
+    opacity: 0%;
     transition: 2s ease-out;
 }
 

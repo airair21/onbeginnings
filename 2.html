@@ -14,8 +14,11 @@
    <p class="words" id="disappear">
     In poetry the number of beginnings so far exceeds the number of endings that cannot even conceive of it. Not every poem is <a class="pa" onclick="myFunction()"> finished</a>–
    </p>
-   <p id="appear">
-    one poem is abandoned, another catches fire and is carried by the wind, which may be an ending, but it is the ending of a poem without an <a class="pa" id="link" onclick='redirect_Page(this)'> end</a>. 
+   <p class="words" id="appear">
+    one poem is <a class="pa" onclick="myFunction2()">abandoned</a> , 
+   </p>
+   <p id="appear2">
+    another catches fire and is carried by the wind, which may be an ending, but it is the ending of a poem without an <a class="pa" id="link" onclick='redirect_Page(this)'> end</a>. 
    </p>
     </div>
 
@@ -25,6 +28,11 @@
     function myFunction() {
       document.getElementById("appear").style.opacity = "100%";
       document.getElementById("disappear").style.opacity = "0%";
+    }
+    function myFunction2() {
+      document.getElementById("appear").style.opacity = "0%";
+      document.getElementById("disappear").style.opacity = "0%";
+      document.getElementById("appear2").style.opacity = "100%";
     }
 
     let redirect_Page = (ele) => {
@@ -40,7 +48,7 @@
         }, 1500);	// call function after 5000 milliseconds or 5 seconds
 
         document.getElementsByTagName("BODY")[0].style.backgroundColor = "black";      
-        document.getElementById("appear").style.opacity = "0%";
+        document.getElementById("appear2").style.opacity = "0%";
     }
 
 </script>
