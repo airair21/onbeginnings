@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On Beginnings</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/mlb7wxa.css">
+</head>
+
+<body id="demo">
+    
+    <div class="box"> 
+   <p>
+        Everyone knows that if you query poets about how their poems begin, the answer is always the same: a phrase, a line, a scrap of language, a rhythm, an image, something seen, heard, witnessed, or imagined. And the lesson is always the same, and young poets recognize this to be one of the most important lessons they can learn:     </p>
+    <h2>
+        if you have any idea for a poem, an exact grid of intent, you are on the wrong path, a dead-end alley, at the top of a cliff you haven’t even climbed. This is a lesson that can only be learned by trial and error.
+    </h2>
+   <p>
+        I believe many fine poems begin with ideas, but if you tell too many faces this, or tell it too loudly, they will get the <a onclick="myFunction()">wrong</a> idea. 
+    </p>
+    </div>
+
+    <p class="semi">
+        ; <strong>--</strong> ;<strong>---</strong> ;<strong>-</strong> ;<strong>---</strong> ;<strong>-</strong> ;<strong>--</strong> ;<strong>---</strong> ; <strong>--</strong> ;<strong>--</strong> ;<strong>-</strong> ;<strong>----</strong> ;<strong>-</strong> ;<strong>----</strong> ;<strong>--</strong> ;<strong>---</strong> ;<strong>---</strong> ;<strong>--</strong> ;
+    </p>
+
+    <a onclick='redirect_Page(this)'><div id="circle"></div></a>
+
+    <script>
+
+    function myFunction() {
+
+        document.getElementById("demo").style.display = "initial";
+        document.getElementById("demo2").style.display = "initial";
+        document.getElementById("appear").style.display = "initial";
+
+    }
+
+
+    let redirect_Page = (ele) => {
+    	
+        ele.disabled = true;
+        
+        let tID = setTimeout(function () {
+          
+          document.getElementsByTagName("BODY")[0].style.backgroundColor = "black";
+
+			// redirect page.
+            window.location.href = '5.html';
+ 
+            
+        }, 1500);	// call function after 5000 milliseconds or 5 seconds
+
+        document.getElementsByTagName("BODY")[0].style.backgroundColor = "black";
+        document.getElementById("demo").style.opacity = "0%";
+        document.getElementById("demo2").style.opacity = "0%";
+        document.getElementById("demo3").style.opacity = "0%";
+        document.getElementById("demo4").style.opacity = "0%";
+        document.getElementById("demo5").style.opacity = "0%";
+        document.getElementById("demo6").style.opacity = "0%";
+        document.getElementById("circle").style.opacity = "0%";
+    }
+    </script>
+
+</body>
+</html>
