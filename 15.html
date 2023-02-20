@@ -10,7 +10,15 @@
 
 <body onload="myFunction3()">
 
-   
+    <section class="cir" id="gone">
+        <h4 class="text3" id="what">I--l-o-v-e--y-o-u-.---I--a-m--h-e-r-e--w-i-t-h--y-o-u-.---D-o-n-'-t--b-e--a-f-r-a-i-d-.---G-o--t-o--s-l-e-e-p--n-o-w-.</h4>
+    </section>
+
+    <p class="word words-2" id="demo3">
+		<span class="motion">night</span>
+		<span class="motion">after</span>
+		<span class="motion"><a onclick="myFunction2()" id="liv">night</a></span>
+	</p>
 
     <div class="box">
         <p id="demo">
@@ -24,14 +32,7 @@
         <h2 id="appear"> 
             in poem after poem I encountered words that mark the first something made out of language that we hear as children repeated night after night, like a refrain: I love you. I am here with you. Don’t be afraid. Go to sleep now. And I encountered words that mark the last something made out of language that we hope to hear on earth: I love you. I am here with you. Don’t be afraid. Go to sleep now.         
         </h2>
-
-        
     </div>
-
-    <section class="cir" id="gone">
-        <h4 class="text3" id="what">I-love-you.---I-am-here-w ith-you.---D on't-be-afraid.---G o-to-sleep-now.</h4>
-    </section>
-    
 
 
     <div class="gone" id="circle" onclick='redirect_Page(this)'></div>
@@ -46,13 +47,13 @@
       document.getElementById("what").style.opacity = "100%";
 
 
-      //document.getElementById("demo").style.display = "none";
+      document.getElementById("demo3").style.display = "initial";
       document.getElementById("demo2").style.display = "none";
       document.getElementById("demo").style.display = "none";
       //document.getElementById("gone").style.display = "initial";
 
       document.getElementById("demo").style.zIndex = "-1";
-      document.getElementById("demo2").style.zIndex = "-1";
+      document.getElementById("demo3").style.zIndex = "1";
       document.getElementById("gone").style.zIndex = "1";
       document.getElementById("appear").style.zIndex = "-1";
     }
@@ -64,13 +65,14 @@
 
       document.getElementById("appear").style.display = "initial";
       document.getElementById("gone").style.display = "none";
+      document.getElementById("demo3").style.display = "none";
 
       document.getElementById("appear").style.zIndex = "1";
       document.getElementById("shit").style.zIndex = "-1";      
     }
 
    function myFunction3() {
-      //document.getElementById("demo").style.display = "none";
+      document.getElementById("demo3").style.display = "none";
       //document.getElementById("circle").style.display = "none";
       //document.getElementById("gone").style.display = "none";
     }
@@ -109,7 +111,7 @@
             element[i].style.opacity = 0
         }
 
-        element[i].style.transform = "rotate("+i*4.7+"deg)"
+        element[i].style.transform = "rotate("+i*2.9+"deg)"
     }
 
 </script>

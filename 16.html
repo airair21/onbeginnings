@@ -1,0 +1,82 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On Beginnings</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/mlb7wxa.css">
+</head>
+
+<body>
+    
+    <div class="box">
+        <h2 id="demo">
+            But it is growing damp and I must go in. Memory’s fog is rising.        
+        </h2>
+        <p id="demo2">
+            Among Emily Dickinson’s last words (in a letter). A woman whom everyone thought of as shut-in, homebound, cloistered, spoke as if she had been out, exploring the earth, her whole life, and it was finally time to go in. And it was.         
+        </p>
+    </div>
+
+
+    <div id="circle" onclick='redirect_Page(this)'></div>
+
+
+<script>
+    
+    function myFunction() {
+      document.getElementsByTagName("BODY")[0].style.backgroundColor = "white";
+      document.getElementById("demo").style.opacity = "0%";
+      document.getElementById("demo2").style.opacity = "0%";
+      document.getElementById("demo3").style.opacity = "0%";
+      document.getElementById("circle").style.opacity = "0%";
+
+      document.getElementById("demo").style.zIndex = "-1";
+      document.getElementById("demo2").style.zIndex = "-1";
+      document.getElementById("demo3").style.zIndex = "-1";
+      document.getElementById("poem").style.zIndex = "1";
+    }
+    function myFunction2() {
+      document.getElementsByTagName("BODY")[0].style.backgroundColor = "black";
+      document.getElementById("demo").style.opacity = "100%";
+      document.getElementById("demo2").style.opacity = "100%";
+      document.getElementById("demo3").style.opacity = "100%";
+      document.getElementById("circle").style.opacity = "100%";
+
+      document.getElementById("poem").style.display = "none";
+      
+      document.getElementById("demo").style.zIndex = "1";
+      document.getElementById("demo2").style.zIndex = "1";
+      document.getElementById("demo3").style.zIndex = "1";
+      document.getElementById("tree").style.zIndex = "-1";      
+    }
+
+    let redirect_Page = (ele) => {
+    	
+        ele.disabled = true;
+        
+        let tID = setTimeout(function () {
+          
+          document.getElementsByTagName("BODY")[0].style.backgroundColor = "black";
+
+			// redirect page.
+            window.location.href = 'home.html';
+ 
+            
+        }, 1000);	// call function after 5000 milliseconds or 5 seconds
+
+        document.getElementsByTagName("BODY")[0].style.backgroundColor = "black";
+        document.getElementById("demo").style.opacity = "0%";
+        document.getElementById("demo2").style.opacity = "0%";
+        document.getElementById("demo3").style.opacity = "0%";
+        document.getElementById("demo4").style.opacity = "0%";
+        document.getElementById("demo5").style.opacity = "0%";
+        document.getElementById("demo6").style.opacity = "0%";
+        document.getElementById("circle").style.opacity = "0%";
+    }
+
+</script>
+
+</body>
+</html>
