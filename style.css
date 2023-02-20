@@ -392,6 +392,7 @@ a:hover {
     color: black;
     font-size: 40px;
     animation: wait 7s linear;
+    transition: 1s;
 }
 @keyframes poem {
     from 
@@ -459,13 +460,83 @@ a:hover {
     background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(102,102,102,1) 34%, rgba(255,255,255,1) 100%);
 }
 
-.semi {
+#semi {
     word-spacing: 23rem;
     width: 80%;
     margin: auto;
 
     transition: 3s;
+    text-align: center; 
+    line-height: 32px;
+
+    opacity: 0%;
 }
-strong {
+em {
     color: black;
+}
+
+/* 
+scroll bars from https://www.winterwind.com/tutorials/css/37
+*/
+.container {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+.scroll {
+    white-space: nowrap;
+    margin: 0 2em;
+}
+.scroll div {
+    display: flex;
+    gap: 2em;
+}
+.scroll p {
+    font-size: 5em;
+    color: black;
+    /*
+    font-weight: bold;
+    */
+    margin-bottom: 0;
+    line-height: 10px;
+}
+.RightToLeft {
+    animation: RightToLeft 20s infinite linear;
+}
+@keyframes  RightToLeft {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+}
+.LeftToRight {
+    animation: LeftToRight 25s infinite linear;
+}
+@keyframes  LeftToRight {
+    from {
+      transform: translateX(-50%);
+    }
+    to {
+      transform: translateX(0%);
+    }
+}
+
+strong {
+    font-family: "contralto-big", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 4em;
+
+    color: black;
+}
+
+#liv {
+    color: black;
+}
+#liv:hover {
+    color: white;
+    background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(102,102,102,1) 34%, rgba(255,255,255,1) 100%);
 }

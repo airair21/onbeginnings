@@ -1,0 +1,126 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On Beginnings</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/mlb7wxa.css">
+</head>
+
+<body onload="myFunction3()">
+
+   
+
+    <div class="box">
+        <p id="disappear">
+            You might say a poem is a semicolon, a living semicolon, what connects the first line to the last, the act of keeping together that whose nature is to <a class="pa" onclick="myFunction()">fly apart</a>.        
+        </p>
+    </div>
+
+    <div id="demo">
+        <div class="container">
+            <div class="scroll">
+                <div class="RightToLeft">
+                    <p> what connects the first line to the last <strong>;</strong> <a id="liv" onclick="myFunction2()">a living semicolon</a> ,</p>
+                    <p> what connects the first line to the last <strong>;</strong> <a id="liv" onclick="myFunction2()">a living semicolon</a> ,</p>
+                </div>
+                <div class="LeftToRight">
+                    <p> what connects the first line to the last <strong>;</strong> <a id="liv" onclick="myFunction2()">a living semicolon</a> ,</p>
+                    <p> what connects the first line to the last <strong>;</strong> <a id="liv" onclick="myFunction2()">a living semicolon</a> ,</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="box">
+        <h2 id="appear">
+            Between the first and last lines there exists—a poem—and if it were not for the poem that intervenes, the first and last lines of a poem would not speak to each other.
+            <br>
+            Would not speak to each other. Because the lines of a poem are speaking to each other, Not you to them or they to you. 
+        </h2>
+    </div>
+
+
+
+    <a onclick='redirect_Page(this)'><div id="circle"></div></a>
+    
+        
+<script>
+    function myFunction() {
+      document.getElementsByTagName("BODY")[0].style.backgroundColor = "white";
+      //document.getElementById("demo").style.opacity = "0%";
+      //document.getElementById("demo2").style.opacity = "0%";
+      //document.getElementById("demo3").style.opacity = "100%";
+      //document.getElementById("what").style.opacity = "100%";
+
+
+      document.getElementById("demo").style.display = "initial";
+      document.getElementById("disappear").style.display = "none";
+      document.getElementById("appear").style.display = "none";
+
+      document.getElementById("demo").style.zIndex = "1";
+      document.getElementById("appear").style.zIndex = "-1";
+    }
+    function myFunction2() {
+      document.getElementsByTagName("BODY")[0].style.backgroundColor = "black";
+      document.getElementById("appear").style.opacity = "100%";
+      document.getElementById("circle").style.opacity = "100%";
+
+      document.getElementById("appear").style.display = "initial";
+      document.getElementById("circle").style.display = "initial";
+      document.getElementById("demo").style.display = "none";
+      document.getElementById("disappear").style.display = "none";
+
+      document.getElementById("appear").style.zIndex = "1";
+      document.getElementById("shit").style.zIndex = "-1";      
+    }
+
+    function myFunction3() {
+      document.getElementById("demo").style.display = "none";
+      document.getElementById("circle").style.display = "none";
+    }
+
+    let redirect_Page = (ele) => {
+    	
+        ele.disabled = true;
+        
+        let tID = setTimeout(function () {
+          
+          document.getElementsByTagName("BODY")[0].style.backgroundColor = "black";
+
+			// redirect page.
+            window.location.href = '10.html';
+ 
+            
+        }, 1000);	// call function after 5000 milliseconds or 5 seconds
+
+        document.getElementsByTagName("BODY")[0].style.backgroundColor = "black";
+        document.getElementById("demo").style.opacity = "0%";
+        document.getElementById("demo2").style.opacity = "0%";
+        document.getElementById("appear").style.opacity = "0%";
+        document.getElementById("circle").style.opacity = "0%";
+    }
+
+    // now split text in letters
+    const text = document.querySelector('.text2');
+    text.innerHTML = text.textContent.replace(/\S/g, "<span>$&</span>");
+
+    const element = document.querySelectorAll('span');
+    for(let i=0; i<element.length; i++) {
+        const txt = element[i].textContent
+
+        if (txt === '-') {
+            console.log('make transparent')
+            element[i].style.opacity = 0
+        }
+
+        element[i].style.transform = "rotate("+i*11+"deg)"
+    }
+
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On Beginnings</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/mlb7wxa.css">
+</head>
+
+<body id="demo">
+    
+    <div class="box"> 
+   <p>
+    I have never, in my life, read a poem that ended with the words The End. Why is that, I wonder. I think perhaps the brevity of poems compared to novels makes one feel that there has been no great sustention of energy, no marathon worthy of pulling tape across the finish line. And then I found a poem of mine that I had carefully written by hand in the sixth grade, and at the bottom of the page, in India ink, beautifully apart from the rest of the text, were the words The End. And I realized children very often denote the end because it is indeed a great achievement for them to have written anything, and they are completely unaware of the number of stories and poems that have already been written; they know some, of course, but have not yet found out the extent to which they are not the only persons residing on the planet.    
+    </p>
+    <h2>
+        And so they sign their poems and stories like kings. Which is a wonderful thing.     
+    </h2>
+    </div>
+
+    <a onclick='redirect_Page(this)'><div id="circle"></div></a>
+
+    <script>
+        let redirect_Page = (ele) => {
+    	
+        ele.disabled = true;
+        
+        let tID = setTimeout(function () {
+          
+          document.getElementsByTagName("BODY")[0].style.backgroundColor = "black";
+
+			// redirect page.
+            window.location.href = '12.html';
+ 
+            
+        }, 1500);	// call function after 5000 milliseconds or 5 seconds
+
+        document.getElementsByTagName("BODY")[0].style.backgroundColor = "black";
+        document.getElementById("demo").style.opacity = "0%";
+        document.getElementById("demo2").style.opacity = "0%";
+        document.getElementById("demo3").style.opacity = "0%";
+        document.getElementById("demo4").style.opacity = "0%";
+        document.getElementById("demo5").style.opacity = "0%";
+        document.getElementById("demo6").style.opacity = "0%";
+        document.getElementById("circle").style.opacity = "0%";
+    }
+    </script>
+
+</body>
+</html>
