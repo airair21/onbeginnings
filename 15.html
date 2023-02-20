@@ -1,0 +1,120 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On Beginnings</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/mlb7wxa.css">
+</head>
+
+<body onload="myFunction3()">
+
+   
+
+    <div class="box">
+        <p id="demo">
+            I have flipped through books, reading hundreds of opening and closing lines, across ages, across cultures, across aesthetic schools, and I have discovered that first lines are remarkably similar, even repeated, and that last lines are remarkably similar, even repeated. Of course in all cases they remain remarkably distinct, because the words belong to completely different poems. And I began to realize, reading these first and last lines, that there are not only the first and last lines of the lifelong sentence we each speak but also the first and last lines of the long piece of language delivered to use by others, by those we listen to.        
+        </p>
+
+        <h2 id="demo2">
+            And in the best of all possible lives, <a onclick="myFunction()">that beginning and that end are the same</a>:        
+        </h2>
+
+        <h2 id="appear"> 
+            in poem after poem I encountered words that mark the first something made out of language that we hear as children repeated night after night, like a refrain: I love you. I am here with you. Don’t be afraid. Go to sleep now. And I encountered words that mark the last something made out of language that we hope to hear on earth: I love you. I am here with you. Don’t be afraid. Go to sleep now.         
+        </h2>
+
+        
+    </div>
+
+    <section class="cir" id="gone">
+        <h4 class="text3" id="what">I-love-you.---I-am-here-w ith-you.---D on't-be-afraid.---G o-to-sleep-now.</h4>
+    </section>
+    
+
+
+    <div class="gone" id="circle" onclick='redirect_Page(this)'></div>
+    
+        
+<script>
+    function myFunction() {
+      document.getElementsByTagName("BODY")[0].style.backgroundColor = "white";
+      document.getElementById("demo").style.opacity = "0%";
+      document.getElementById("demo2").style.opacity = "0%";
+      document.getElementById("gone").style.opacity = "100%";
+      document.getElementById("what").style.opacity = "100%";
+
+
+      //document.getElementById("demo").style.display = "none";
+      document.getElementById("demo2").style.display = "none";
+      document.getElementById("demo").style.display = "none";
+      //document.getElementById("gone").style.display = "initial";
+
+      document.getElementById("demo").style.zIndex = "-1";
+      document.getElementById("demo2").style.zIndex = "-1";
+      document.getElementById("gone").style.zIndex = "1";
+      document.getElementById("appear").style.zIndex = "-1";
+    }
+    function myFunction2() {
+      document.getElementsByTagName("BODY")[0].style.backgroundColor = "black";
+      document.getElementById("gone").style.opacity = "0%";
+      document.getElementById("appear").style.opacity = "100%";
+      document.getElementById("circle").style.opacity = "100%";
+
+      document.getElementById("appear").style.display = "initial";
+      document.getElementById("gone").style.display = "none";
+
+      document.getElementById("appear").style.zIndex = "1";
+      document.getElementById("shit").style.zIndex = "-1";      
+    }
+
+   function myFunction3() {
+      //document.getElementById("demo").style.display = "none";
+      //document.getElementById("circle").style.display = "none";
+      //document.getElementById("gone").style.display = "none";
+    }
+
+    let redirect_Page = (ele) => {
+    	
+        ele.disabled = true;
+        
+        let tID = setTimeout(function () {
+          
+          document.getElementsByTagName("BODY")[0].style.backgroundColor = "black";
+
+			// redirect page.
+            window.location.href = '16.html';
+ 
+            
+        }, 1000);	// call function after 5000 milliseconds or 5 seconds
+
+        document.getElementsByTagName("BODY")[0].style.backgroundColor = "black";
+        document.getElementById("demo").style.opacity = "0%";
+        document.getElementById("demo2").style.opacity = "0%";
+        document.getElementById("appear").style.opacity = "0%";
+        document.getElementById("circle").style.opacity = "0%";
+    }
+
+    // now split text in letters
+    const text = document.querySelector('.text3');
+    text.innerHTML = text.textContent.replace(/\S/g, "<span>$&</span>");
+
+    const element = document.querySelectorAll('span');
+    for(let i=0; i<element.length; i++) {
+        const txt = element[i].textContent
+
+        if (txt === '-') {
+            console.log('make transparent')
+            element[i].style.opacity = 0
+        }
+
+        element[i].style.transform = "rotate("+i*4.7+"deg)"
+    }
+
+</script>
+
+
+
+</body>
+</html>

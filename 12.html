@@ -1,0 +1,95 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On Beginnings</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/mlb7wxa.css">
+</head>
+
+<body>
+    
+    <div class="box">
+        <p id="demo">
+            Roland Barthes suggests there are three ways to finish any piece of writing: the ending will have the last word or the ending will be silent or the ending will execute a pirouette, do something unexpectedly incongruent.
+            <br>
+            Gaston Bachelard says the single most succinct and astonishing thing:                    
+        </p>
+        <h2 id="demo2">
+            We begin in admiration and we end by organizing our disappointment.        
+        </h2>
+        <p id="demo3">
+            The moment of admiration is the experience of something unfiltered, vital and fresh—it could also be horror—and the moment of organization is both the onset of disappointment and its dignification; the least we can do is dignify our knowingness, the loss of some vitality through familiarization, by admiring not the thing itself but how we can organize it, think about it. 
+            <br>
+            I am afraid there is no way around this. It is the one try inevitable thing. And if you believe that, then you are conceding that in the beginning was the act, not the word.                    
+        </p>
+    </div>
+
+    <p id="mind">
+        mind
+    </p>
+    <p onclick="myFunction2()">
+        <a id="poem"> poem</a>
+    </p>
+
+    <div class="gone" id="circle" onclick='redirect_Page(this)'></div>
+
+
+<script>
+    
+    function myFunction() {
+      document.getElementsByTagName("BODY")[0].style.backgroundColor = "white";
+      document.getElementById("demo").style.opacity = "0%";
+      document.getElementById("demo2").style.opacity = "0%";
+      document.getElementById("demo3").style.opacity = "0%";
+      document.getElementById("circle").style.opacity = "0%";
+
+      document.getElementById("demo").style.zIndex = "-1";
+      document.getElementById("demo2").style.zIndex = "-1";
+      document.getElementById("demo3").style.zIndex = "-1";
+      document.getElementById("poem").style.zIndex = "1";
+    }
+    function myFunction2() {
+      document.getElementsByTagName("BODY")[0].style.backgroundColor = "black";
+      document.getElementById("demo").style.opacity = "100%";
+      document.getElementById("demo2").style.opacity = "100%";
+      document.getElementById("demo3").style.opacity = "100%";
+      document.getElementById("circle").style.opacity = "100%";
+
+      document.getElementById("poem").style.display = "none";
+      
+      document.getElementById("demo").style.zIndex = "1";
+      document.getElementById("demo2").style.zIndex = "1";
+      document.getElementById("demo3").style.zIndex = "1";
+      document.getElementById("tree").style.zIndex = "-1";      
+    }
+
+    let redirect_Page = (ele) => {
+    	
+        ele.disabled = true;
+        
+        let tID = setTimeout(function () {
+          
+          document.getElementsByTagName("BODY")[0].style.backgroundColor = "black";
+
+			// redirect page.
+            window.location.href = '13.html';
+ 
+            
+        }, 1000);	// call function after 5000 milliseconds or 5 seconds
+
+        document.getElementsByTagName("BODY")[0].style.backgroundColor = "black";
+        document.getElementById("demo").style.opacity = "0%";
+        document.getElementById("demo2").style.opacity = "0%";
+        document.getElementById("demo3").style.opacity = "0%";
+        document.getElementById("demo4").style.opacity = "0%";
+        document.getElementById("demo5").style.opacity = "0%";
+        document.getElementById("demo6").style.opacity = "0%";
+        document.getElementById("circle").style.opacity = "0%";
+    }
+
+</script>
+
+</body>
+</html>
