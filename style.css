@@ -780,6 +780,17 @@ section .text3 span {
 
     .title {
         font-size: 80px;
+        margin-top: 10px;
+    }
+    .by {
+        margin-bottom: 20px;
+        text-anchor: end;
+    }
+    .center h2 {
+        top: 20%;
+    }
+    .center p {
+        top: 60%;
     }
 
     .words {
@@ -792,6 +803,7 @@ section .text3 span {
 
     #circle {
         margin-left: 50%;
+        margin-top: 5%;
     }
 
     #semi {
@@ -804,4 +816,181 @@ section .text3 span {
     .LeftToRight {
         animation: LeftToRight 18s infinite linear;
     }
+
+    #tree {
+        left: 106px;
+        bottom: 20px;
+        font-size: 50pt;
+    }
+    #tree2 {
+        left: 186px;
+        bottom: 120px;
+        font-size: 50pt;
+    }
+    #tree3 {
+        left: 206px;
+        bottom: 260px;
+        font-size: 50pt;
+    }
+    #fruit {
+        left: 183px;
+        top: 130px;
+        font-size: 35pt;
+    }
+    #fruit2 {
+        left: 46px;
+        top: 230px;
+        font-size: 35pt;
+    }
+    #fruit3 {
+        left: 305px;
+        top: 171px;
+        font-size: 35pt;
+    }
+    #fruit4 {
+        left: 78px;
+        top: 330px;
+        font-size: 35pt;
+    }
+    #fruit5 {
+        left: 83px;
+        top: 84px;
+        font-size: 35pt;
+    }
+
+    .overflow{
+        overflow-y: hidden;
+    }
+
+    #weird {
+        font-size: 40pt;
+        margin: auto;
+        left: 1%;
+        top: 80px;
+        position: absolute;
+        transform: rotate(-90deg) translateX(-2rem);
+    }
+    #theatrical {
+        font-size: 40pt;
+        margin: auto;
+        left: 20%;
+    }
+    #shit {
+        font-size: 40pt;
+        margin: auto;
+        left: 75%;
+        top: 80px;
+    }
+
+    .circ {
+        transform: translate(0px, -20px);
+    }
+
+    #miss {
+        left: 25%;
+        text-align: center;
+        word-spacing: normal;
+    }
+    #movie {
+        right: 0%;
+        text-align: center;
+        word-spacing: normal;
+    }
+    #ate {
+        left: 20%;
+        text-align: center;
+        word-spacing: normal;
+    }
+    #screen {
+        left: 0%;
+        text-align: center;
+        word-spacing: normal;
+    }
+    #theend {
+        top: 15%;
+        left: 30%;
+        font-size: 50pt;
+
+        width: 20px;
+    }
+
+    #unfiltered {
+        color: black;
+    
+        position: absolute;
+        left: 100px;
+        top: 20px;
+    }
+    #fresh {
+        color: black;
+    
+        position: absolute;
+        left: 222px;
+        top: 126px;
+    }
+    #vital {
+        color: black;
+    
+        position: absolute;
+        left: 144px;
+        top: 221px;
+    }
+    #horror {
+        color: black;
+    
+        position: absolute;
+        left: 334px;
+        top: 321px;
+    }
+    #admiration {
+        color: black;
+        font-size:40px;
+    
+        position: absolute;
+        left: 30px;
+        top: 20px;
+    }
+    #unfiltered2 {
+        color: black;
+    
+        position: absolute;
+        left: 40px;
+        bottom: 160px;
+    }
+    #fresh2 {
+        color: black;
+    
+        position: absolute;
+        left: 40px;
+        bottom: 140px;
+    }
+    #vital2 {
+        color: black;
+    
+        position: absolute;
+        left: 40px;
+        bottom: 120px;
+    }
+    #horror2 {
+        color: black;
+    
+        position: absolute;
+        left: 40px;
+        bottom: 100px;
+    }
+    #disappointment {
+        color: black;
+        font-size:40px;
+        text-decoration: underline;
+    
+        position: absolute;
+        right: 40px;
+        bottom: 20px;
+    }
+
+    .word {
+        top: 70%;
+    }
+    
+
 }
