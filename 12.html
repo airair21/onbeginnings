@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://use.typekit.net/mlb7wxa.css">
 </head>
 
-<body>
+<body onload="myFunction3()">
     
     <div class="box">
         <p id="demo">
@@ -72,6 +72,7 @@
       document.getElementById("demo2").style.opacity = "0%";
       document.getElementById("appear").style.opacity = "0%";
       document.getElementById("circle").style.opacity = "0%";
+      document.getElementById("demo4").style.opacity = "100%";
 
       document.getElementById("demo1").style.display = "none";
       document.getElementById("demo2").style.display = "none";
@@ -94,6 +95,12 @@
       document.getElementById("demo").style.zIndex = "1";
       document.getElementById("demo2").style.zIndex = "1";
       document.getElementById("appear").style.zIndex = "1";    
+    }
+    function myFunction3() {
+        //document.getElementById("demo2").style.display = "none";
+        document.getElementById("demo4").style.opacity = "0%";
+        //document.getElementById("appear").style.opacity = "0%";
+        //document.getElementById("circle").style.display = "none";
     }
 
     let redirect_Page = (ele) => {
