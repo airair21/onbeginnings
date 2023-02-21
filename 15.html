@@ -10,19 +10,21 @@
 
 <body onload="myFunction3()">
 
-    <section class="cir" id="gone">
-        <h4 class="text3" id="what">I--l-o-v-e--y-o-u-.---I--a-m--h-e-r-e--w-i-t-h--y-o-u-.---D-o-n-'-t--b-e--a-f-r-a-i-d-.---G-o--t-o--s-l-e-e-p--n-o-w-.</h4>
-    </section>
-
-    <p class="word words-2" id="demo3">
-		<span class="motion">night</span>
-		<span class="motion">after</span>
-		<span class="motion"><a onclick="myFunction2()" id="liv">night</a></span>
-	</p>
+    
 
     <div class="box">
         <p id="demo">
             I have flipped through books, reading hundreds of opening and closing lines, across ages, across cultures, across aesthetic schools, and I have discovered that first lines are remarkably similar, even repeated, and that last lines are remarkably similar, even repeated. Of course in all cases they remain remarkably distinct, because the words belong to completely different poems. And I began to realize, reading these first and last lines, that there are not only the first and last lines of the lifelong sentence we each speak but also the first and last lines of the long piece of language delivered to use by others, by those we listen to.        
+        </p>
+
+        <section class="cir" id="gone">
+            <h4 class="text3" id="what">I--l-o-v-e--y-o-u-.----I--a-m---h-e-r-e--w-i-t-h--y-o-u-.----D-o-n-'-t--b-e--a-f-r-a-i-d-.----G-o--t-o---s-l-e-e-p--n-o-w-.</h4>
+        </section>
+    
+        <p class="word words-2" id="demo3">
+            <span class="motion">night</span>
+            <span class="motion">after</span>
+            <span class="motion"><a onclick="myFunction2()" id="liv">night</a></span>
         </p>
 
         <h2 id="demo2">
@@ -94,8 +96,10 @@
         document.getElementsByTagName("BODY")[0].style.backgroundColor = "black";
         document.getElementById("demo").style.opacity = "0%";
         document.getElementById("demo2").style.opacity = "0%";
-        document.getElementById("appear").style.opacity = "0%";
+        document.getElementById("demo3").style.opacity = "0%";
         document.getElementById("circle").style.opacity = "0%";
+        document.getElementById("appear").style.opacity = "0%";
+        document.getElementById("gone").style.opacity = "0%";
     }
 
     // now split text in letters
@@ -111,7 +115,7 @@
             element[i].style.opacity = 0
         }
 
-        element[i].style.transform = "rotate("+i*2.9+"deg)"
+        element[i].style.transform = "rotate("+i*2.7+"deg)"
     }
 
 </script>

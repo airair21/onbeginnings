@@ -36,15 +36,14 @@
     <div class="box">
         <h2 id="appear">
             Between the first and last lines there exists—a poem—and if it were not for the poem that intervenes, the first and last lines of a poem would not speak to each other.
-            <br>
-            Would not speak to each other. Because the lines of a poem are speaking to each other, Not you to them or they to you. 
+            <br><br>
+            Would not speak to each other. Because the lines of a poem are speaking to each other, not you to them or they to you. 
         </h2>
     </div>
 
 
 
-    <a onclick='redirect_Page(this)'><div id="circle"></div></a>
-    
+    <a onclick='redirect_Page(this)' id="gone"> <div id="circle"></div> </a>    
         
 <script>
     function myFunction() {
@@ -56,6 +55,7 @@
 
 
       document.getElementById("demo").style.display = "initial";
+      document.getElementById("gone").style.display = "initial";
       document.getElementById("disappear").style.display = "none";
       document.getElementById("appear").style.display = "none";
 
@@ -65,10 +65,10 @@
     function myFunction2() {
       document.getElementsByTagName("BODY")[0].style.backgroundColor = "black";
       document.getElementById("appear").style.opacity = "100%";
-      document.getElementById("circle").style.opacity = "100%";
+      document.getElementById("gone").style.opacity = "100%";
 
       document.getElementById("appear").style.display = "initial";
-      document.getElementById("circle").style.display = "initial";
+      //document.getElementById("circle").style.display = "initial";
       document.getElementById("demo").style.display = "none";
       document.getElementById("disappear").style.display = "none";
 
@@ -78,7 +78,7 @@
 
     function myFunction3() {
       document.getElementById("demo").style.display = "none";
-      document.getElementById("circle").style.display = "none";
+      //document.getElementById("circle").style.display = "none";
     }
 
     let redirect_Page = (ele) => {
@@ -99,7 +99,9 @@
         document.getElementById("demo").style.opacity = "0%";
         document.getElementById("demo2").style.opacity = "0%";
         document.getElementById("appear").style.opacity = "0%";
+        document.getElementById("gone").style.opacity = "0%";
         document.getElementById("circle").style.opacity = "0%";
+        document.getElementsByTagName(h).style.opacity = "0%"
     }
 
     // now split text in letters

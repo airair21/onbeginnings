@@ -8,15 +8,18 @@
     <link rel="stylesheet" href="https://use.typekit.net/mlb7wxa.css">
 </head>
 
-<body id="demo">
+<body onload="myFunction3()">
     
     <div class="box"> 
+<div id="disappear">
    <p>
         Now here is something really interesting (to me), something you can use at a standing-up-only party when everyone is tired of hearing there are one million three-thousand-two-hundred-ninety-five words used by the Esimo for snow. This is what Ezra Pound learned from Ernest Fenollosa:
     </p>
     <h2>
-        Some languages are so constructed—English among them—that we each only really speak one sentence in our lifetime.    
+        Some languages are so constructed—English among them—that we each only really speak <a onclick="myFunction()">one sentence</a> in our lifetime.    
     </h2>
+</div>
+<div id="demo">
    <p>
         That sentence begins with your first words, toddling around the kitchen, and ends with your last words right before you step into the limousine, or in a nursing home, the night-duty attendant vaguely on hand. Or, if you are blessed, they are heard by someone who knows you and loves you and will be sorry to hear the sentence end.     
     </p>
@@ -24,29 +27,57 @@
         When I told Mr. Angel about the lifelong sentence, he said:
     </p>
     <h2>
-        “That’s a lot of <a onclick="myFunction()">semicolons</a>!”
+        “That’s a lot of <a onclick="myFunction2()">semicolons</a>!”
     </h2>
+</div>
+<div id="demo2">
     <p>
         He is absolutely right; the sentence would be unwieldy and awkward and resemble the novel of a savant, but the next time you use a semicolon (which, by the way, is the least-used mark of punctuation in all of poetry) you should stop and be thankful that there exists this little thing, invented by a human being–an Italian as a matter of fact–that allows us to go on and keep on connecting speech that for all apparently purposes is unrelated. 
     </p>
+</div>
     </div>
 
+
     <p id="semi">
-        ; <em>-</em> ;<em>---</em> ;<em>----------</em> ;<em>-----</em> ;<em>--</em> ;<em>--</em> ;<em>------</em> ;<em>--</em> ;<em>-----</em> ;
+        <strong>--</strong> ; <strong>-</strong> ;<strong>---</strong> ;<strong>----------</strong> ;<strong>-----</strong> ;<strong>--</strong> ;<strong>--</strong> ;<strong>------</strong> ;<strong>--</strong> ;<strong>-----</strong> ;<strong>--</strong> ; <strong>-</strong> ;<strong>---</strong> ;<strong>-------</strong> ;<strong>-----</strong> ;<strong>--</strong> ;<strong>---</strong> ;<strong>----</strong> ;<strong>--------</strong> ;<strong>-----</strong> ;<strong>--</strong> ; <strong>--</strong> ;<strong>-----</strong> ;<strong>-----------</strong> ;<strong>-----</strong> ;<strong>--</strong> ;<strong>--</strong> ;<strong>---------</strong> ;<strong>--</strong> ;<strong>-----</strong> ;<strong>--</strong> ; <strong>-</strong> ;<strong>---</strong> ;<strong>----------</strong> ;<strong>-----</strong> ;<strong>--</strong> ;<strong>--</strong> ;<strong>------</strong> ;<strong>--</strong> ;<strong>-----</strong> ;<strong>--</strong> ; <strong>-</strong> ;<strong>---</strong> ;<strong>-------</strong> ;<strong>-----</strong> ;<strong>--</strong> ;<strong>---</strong> ;<strong>----</strong> ;<strong>--------</strong> ;<strong>-----</strong> ;<strong>--</strong> ; <strong>--</strong> ;<strong>-----</strong> ;<strong>-----------</strong> ;<strong>-----</strong> ;<strong>--</strong> ;<strong>--</strong> ;<strong>---------</strong> ;<strong>--</strong> ;<strong>-----</strong> ;
     </p>
 
-    <a onclick='redirect_Page(this)' id="appear"><div id="circle"></div></a>
+    <a onclick='redirect_Page(this)' id="appear"> <div id="circle"></div> </a>
 
-    <script>
+<script>
 
     function myFunction() {
 
-        //document.getElementById("semi").style.display = "initial";
+        document.getElementById("disappear").style.opacity = "0%";
+        document.getElementById("demo").style.opacity = "100%";
+
+        //document.getElementById("disappear").style.display = "none";
+        document.getElementById("demo").style.display = "initial";
+
+        document.getElementById("disappear").style.transition = "all 2s";
+        document.getElementById("demo").style.transition = "all 2s";
+
+
         document.getElementById("appear").style.display = "initial";
+
+    }
+    function myFunction2() {
+
+        document.getElementById("disappear").style.display = "none";
+        document.getElementById("demo").style.display = "none";
+        document.getElementById("semi").style.display = "initial";
 
         document.getElementById("semi").style.opacity = "100%";
         document.getElementById("appear").style.opacity = "100%";
+        document.getElementById("circle").style.opacity = "100%";
 
+    }
+    function myFunction3() {
+      document.getElementById("appear").style.display = "none";
+      document.getElementById("demo").style.display = "none";
+      document.getElementById("demo2").style.display = "none";
+      //document.getElementById("circle").style.display = "none";
+      //document.getElementById("gone").style.display = "none";
     }
 
 
@@ -59,7 +90,7 @@
           document.getElementsByTagName("BODY")[0].style.backgroundColor = "black";
 
 			// redirect page.
-            window.location.href = '8.html';
+            window.location.href = '9.html';
  
             
         }, 1500);	// call function after 5000 milliseconds or 5 seconds

@@ -8,54 +8,77 @@
     <link rel="stylesheet" href="https://use.typekit.net/mlb7wxa.css">
 </head>
 
-<body id="demo">
+<body onload="myFunction3()">
     
     <div class="box"> 
-    <p>
-        The painter Cy Twombly quotes John Crowe Ransom, on a scrap of paper:    
-    </p>
-    <h2>
-        “The image cannot be disposed of a primordial freshness which ideas can never claim.”    
-    </h2>
-    <p>
-        Easy and appropriate thing for a painter to say. Cy Twombly uses text in some of his drawings and paintings, usually poetry, usually Dante. Many men and women have written long essays and lectures on the ideas they see expressed in Twombly’s work.
-        <br>
-        Bachelard’s sentence simply says this:
-    </p>
-    <h2>
-        origins (beginnings) have consequences (endings).
-    </h2>
-    <p>
-        The poem is the consequence of its origins. Give me the fruit and I will take from it a see and plant it and watch grow the tree from which it fell. 
-    </p>
+    <div id="demo">
+        <p>
+            The painter Cy Twombly quotes John Crowe Ransom, on a scrap of paper:    
+        </p>
+        <h2>
+            “The image cannot be disposed of a primordial freshness which ideas can never claim.”    
+        </h2>
+        <p>
+            Easy and appropriate thing for a painter to say. Cy Twombly uses text in some of his drawings and paintings, usually poetry, usually Dante. Many men and women have written long essays and lectures on the ideas they see expressed in Twombly’s work.
+            <br><br>
+            Bachelard’s sentence simply says <a onclick="myFunction()" class="pa">this</a>:
+        </p>
+    </div>
+    <div id="appear">
+        <h2>
+            origins (beginnings) have consequences (endings).
+        </h2>
+        <p>
+            The poem is the consequence of its origins. Give me the fruit and I will take from it a see and plant it and watch grow the tree from which it fell. 
+        </p>
+    </div>
     </div>
 
-    <a onclick='redirect_Page(this)'><div id="circle"></div></a>
+    <a onclick='redirect_Page(this)' id="gone"><div id="circle"></div></a>
 
     <script>
+
+        function myFunction() {
+            //document.getElementsByTagName("BODY")[0].style.backgroundColor = "white";
+            document.getElementById("demo").style.opacity = "0%";
+            document.getElementById("appear").style.opacity = "100%";
+            document.getElementById("gone").style.opacity = "100%";
+
+            document.getElementById("appear").style.display = "initial";
+            document.getElementById("demo").style.display = "none";
+            //document.getElementById("gone").style.display = "initial";
+
+            //document.getElementById("demo").style.zIndex = "-1";
+            //document.getElementById("demo2").style.zIndex = "-1";
+            //document.getElementById("appear").style.zIndex = "-1";
+            //document.getElementById("poem").style.zIndex = "1";
+        }
+        function myFunction3() {
+            //document.getElementById("demo2").style.display = "none";
+            document.getElementById("gone").style.opacity = "0%";
+            document.getElementById("appear").style.opacity = "0%";
+            //document.getElementById("circle").style.display = "none";
+        }
+
         let redirect_Page = (ele) => {
     	
-        ele.disabled = true;
+            ele.disabled = true;
         
-        let tID = setTimeout(function () {
+            let tID = setTimeout(function () {
           
-          document.getElementsByTagName("BODY")[0].style.backgroundColor = "black";
+                document.getElementsByTagName("BODY")[0].style.backgroundColor = "black";
 
-			// redirect page.
-            window.location.href = '14.html';
+                // redirect page.
+                window.location.href = '14.html';
  
             
-        }, 1500);	// call function after 5000 milliseconds or 5 seconds
+            }, 1500);	// call function after 5000 milliseconds or 5 seconds
 
-        document.getElementsByTagName("BODY")[0].style.backgroundColor = "black";
-        document.getElementById("demo").style.opacity = "0%";
-        document.getElementById("demo2").style.opacity = "0%";
-        document.getElementById("demo3").style.opacity = "0%";
-        document.getElementById("demo4").style.opacity = "0%";
-        document.getElementById("demo5").style.opacity = "0%";
-        document.getElementById("demo6").style.opacity = "0%";
-        document.getElementById("circle").style.opacity = "0%";
-    }
+            document.getElementsByTagName("BODY")[0].style.backgroundColor = "black";
+            document.getElementById("demo").style.opacity = "0%";
+            document.getElementById("appear").style.opacity = "0%";
+            document.getElementById("gone").style.opacity = "0%";
+        }
     </script>
 
 </body>

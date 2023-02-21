@@ -17,21 +17,49 @@
             Gaston Bachelard says the single most succinct and astonishing thing:                    
         </p>
         <h2 id="demo2">
-            We begin in admiration and we end by organizing our disappointment.        
+            We begin in admiration and we end by organizing our <a onclick="myFunction()">disappointment</a>.        
         </h2>
-        <p id="demo3">
+
+        <p id="appear">
             The moment of admiration is the experience of something unfiltered, vital and fresh—it could also be horror—and the moment of organization is both the onset of disappointment and its dignification; the least we can do is dignify our knowingness, the loss of some vitality through familiarization, by admiring not the thing itself but how we can organize it, think about it. 
-            <br>
+            <br> <br>
             I am afraid there is no way around this. It is the one try inevitable thing. And if you believe that, then you are conceding that in the beginning was the act, not the word.                    
         </p>
     </div>
 
-    <p id="mind">
-        mind
+<div id="demo4">
+    <p id="unfiltered">
+        unfiltered
     </p>
-    <p onclick="myFunction2()">
-        <a id="poem"> poem</a>
+    <p id="fresh">
+        fresh
     </p>
+    <p id="vital">
+        vital
+    </p>
+    <p id="horror">
+        horror
+    </p>
+    <h2 id="admiration">
+        admiration
+    </h2>
+
+    <p id="unfiltered2">
+        unfiltered
+    </p>
+    <p id="fresh2">
+        fresh
+    </p>
+    <p id="vital2">
+        vital
+    </p>
+    <p id="horror2">
+        horror
+    </p>
+    <h2 id="disappointment" onclick="myFunction2()">
+        disappointment
+    </h2>
+</div>
 
     <div class="gone" id="circle" onclick='redirect_Page(this)'></div>
 
@@ -42,27 +70,30 @@
       document.getElementsByTagName("BODY")[0].style.backgroundColor = "white";
       document.getElementById("demo").style.opacity = "0%";
       document.getElementById("demo2").style.opacity = "0%";
-      document.getElementById("demo3").style.opacity = "0%";
+      document.getElementById("appear").style.opacity = "0%";
       document.getElementById("circle").style.opacity = "0%";
+
+      document.getElementById("demo1").style.display = "none";
+      document.getElementById("demo2").style.display = "none";
 
       document.getElementById("demo").style.zIndex = "-1";
       document.getElementById("demo2").style.zIndex = "-1";
-      document.getElementById("demo3").style.zIndex = "-1";
+      document.getElementById("appear").style.zIndex = "-1";
       document.getElementById("poem").style.zIndex = "1";
     }
     function myFunction2() {
       document.getElementsByTagName("BODY")[0].style.backgroundColor = "black";
-      document.getElementById("demo").style.opacity = "100%";
-      document.getElementById("demo2").style.opacity = "100%";
-      document.getElementById("demo3").style.opacity = "100%";
+      //document.getElementById("demo").style.opacity = "100%";
+      //document.getElementById("demo2").style.opacity = "100%";
+      document.getElementById("appear").style.opacity = "100%";
       document.getElementById("circle").style.opacity = "100%";
 
-      document.getElementById("poem").style.display = "none";
+      document.getElementById("disappointment").style.display = "none";
+      document.getElementById("appear").style.display = "initial";
       
       document.getElementById("demo").style.zIndex = "1";
       document.getElementById("demo2").style.zIndex = "1";
-      document.getElementById("demo3").style.zIndex = "1";
-      document.getElementById("tree").style.zIndex = "-1";      
+      document.getElementById("appear").style.zIndex = "1";    
     }
 
     let redirect_Page = (ele) => {
@@ -84,9 +115,8 @@
         document.getElementById("demo2").style.opacity = "0%";
         document.getElementById("demo3").style.opacity = "0%";
         document.getElementById("demo4").style.opacity = "0%";
-        document.getElementById("demo5").style.opacity = "0%";
-        document.getElementById("demo6").style.opacity = "0%";
-        document.getElementById("circle").style.opacity = "0%";
+        document.getElementById("appear").style.opacity = "0%";
+        document.getElementById("gone").style.opacity = "0%";
     }
 
 </script>
