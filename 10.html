@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://use.typekit.net/mlb7wxa.css">
 </head>
 
-<body>
+<body onload="myFunction3()">
 
    
 
@@ -18,7 +18,7 @@
         </p>
 
         <h2 id="demo2">
-            The End.        
+           <a onclick="myFunction()">The End.</a>        
         </h2>
 
         <p id="appear"> 
@@ -28,21 +28,27 @@
         </p>
       </div>
 
-        <section class="circ" id="demo3">
-            <h4 class="text2" id="what">what---goes---on---around---us</h4>
-        </section>
-
+    
       
+        
 
-    <h2 id="weird">
-        weird
-    </h2>
-    <h2 id="theatrical">
-        theatrical
-    </h2>
-    <h2 id="shit" onclick="myFunction2()">
-        shit
-    </h2>
+    <div id="disappear">
+        <p id="miss">
+            I will tell you what I miss: 
+        </p>
+        <p id="movie">
+            I miss watching a movie and         
+        </p>
+        <p id="ate">
+            at the end, huge scrolled words        
+        </p>
+        <p id="screen" onclick="myFunction2()">
+            come on the screen and say:        
+        </p>
+        <h2 id="theend">
+            The End
+        </h2>
+    </div>
 
     <div class="gone" id="circle" onclick='redirect_Page(this)'></div>
     
@@ -52,27 +58,27 @@
       document.getElementsByTagName("BODY")[0].style.backgroundColor = "white";
       document.getElementById("demo").style.opacity = "0%";
       document.getElementById("demo2").style.opacity = "0%";
-      document.getElementById("demo3").style.opacity = "100%";
-      document.getElementById("what").style.opacity = "100%";
+      document.getElementById("circle").style.opacity = "0%";
 
 
       //document.getElementById("demo").style.display = "none";
       document.getElementById("demo2").style.display = "none";
-      document.getElementById("appear").style.display = "none";
+      document.getElementById("appear").style.display = "initial";
+      document.getElementById("disappear").style.display = "initial";
+      document.getElementById("screen").style.display = "initial";
 
       document.getElementById("demo").style.zIndex = "-1";
       document.getElementById("demo2").style.zIndex = "-1";
-      document.getElementById("demo3").style.zIndex = "-1";
       document.getElementById("appear").style.zIndex = "-1";
-      document.getElementById("shit").style.zIndex = "1";
+      document.getElementById("screen").style.zIndex = "1";
+      document.getElementById("disappear").style.zIndex = "1";
     }
     function myFunction2() {
       document.getElementsByTagName("BODY")[0].style.backgroundColor = "black";
-      document.getElementById("demo3").style.opacity = "100%";
       document.getElementById("appear").style.opacity = "100%";
       document.getElementById("circle").style.opacity = "100%";
 
-      document.getElementById("appear").style.display = "initial";
+      //document.getElementById("appear").style.display = "initial";
       document.getElementById("demo3").style.display = "none";
 
       document.getElementById("appear").style.zIndex = "1";
@@ -80,8 +86,9 @@
     }
 
     function myFunction3() {
-      document.getElementById("demo").style.display = "none";
-      document.getElementById("circle").style.display = "none";
+      //document.getElementById("demo").style.display = "none";
+      //document.getElementById("circle").style.display = "none";
+      document.getElementById("disappear").style.display = "none";
     }
 
     let redirect_Page = (ele) => {
